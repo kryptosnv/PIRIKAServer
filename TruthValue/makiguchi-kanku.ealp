@@ -1,0 +1,18 @@
+recommend(train):: [0.8] <== inexpensive(train):: [0.8] & time_required(train) :: [0.3] & arrivability(train) :: [0.7].
+arrivability(train) :: [0.7]<== multiple_crossing_over(train):: [0.3].
+multiple_crossing_over(train):: [0.3] <==true.
+inexpensive(train) :: [0.8]<== true.
+time_required(train) :: [0.3]<== true.
+
+recommend(bus) :: [0.8]<== time_required(bus) :: [0.3] & arrivability(bus) :: [0.8] & expensive(bus):: [0.2] & comfortable(bus) :: [0.8].
+arrivability(bus) :: [0.8]<== multiple_crossing_over(bus) :: [0.3].
+multiple_crossing_over(bus) :: [0.3]<== expensive(bus):: [0.2].
+expensive(bus):: [0.2]<== true.
+time_required(bus):: [0.3]<==true.
+comfortable(bus) :: [0.8]<== lavish(bus,seat) :: [0.8].
+lavish(bus, seast):: [0.8] <==true.
+
+~recommend(taxi) :: [0.8]<== expensive(taxi) :: [0.8] & arrivabilit(taxi) :: [0.3].
+expensive(taxi) :: [0.8]<== true.
+arrivabilit(taxi) :: [0.3]<== english(taxi) :: [0.3].
+english(taxi) :: [0.3]<== true.

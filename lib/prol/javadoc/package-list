@@ -1,0 +1,12 @@
+com.igormaznitsa.prol.annotations
+com.igormaznitsa.prol.containers
+com.igormaznitsa.prol.data
+com.igormaznitsa.prol.easygui
+com.igormaznitsa.prol.exceptions
+com.igormaznitsa.prol.io
+com.igormaznitsa.prol.libraries
+com.igormaznitsa.prol.logic
+com.igormaznitsa.prol.logic.triggers
+com.igormaznitsa.prol.parser
+com.igormaznitsa.prol.trace
+com.igormaznitsa.prol.utils

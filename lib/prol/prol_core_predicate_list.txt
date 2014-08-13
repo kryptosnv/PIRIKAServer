@@ -1,0 +1,956 @@
+com.igormaznitsa.prol.libraries.ProlCoreLibrary
+===============================================
+Operators
+-----------------------
+:-op(1200,xf,'.').
+:-op(1200,xfx,'|').
+:-op(700,xfx,'is').
+:-op(700,xfx,'=').
+:-op(700,xfx,'\=').
+:-op(1000,xfy,',').
+:-op(1050,xfy,'->').
+:-op(1100,xfy,';').
+:-op(1200,fx,'?-').
+:-op(1200,fx,':-').
+:-op(1200,xfx,':-').
+:-op(900,fy,'\+').
+:-op(700,xfx,'>').
+:-op(700,xfx,'<').
+:-op(700,xfx,'=<').
+:-op(700,xfx,'>=').
+:-op(700,xfx,'==').
+:-op(700,xfx,'=\=').
+:-op(700,xfx,'\==').
+:-op(700,xfx,'@<').
+:-op(700,xfx,'@>').
+:-op(700,xfx,'@=<').
+:-op(700,xfx,'@>=').
+:-op(700,xfx,'=:=').
+:-op(700,xfx,'=..').
+:-op(500,yfx,'/\').
+:-op(500,yfx,'\/').
+:-op(500,yfx,'+').
+:-op(500,yfx,'-').
+:-op(500,fx,'not').
+:-op(500,fx,'+').
+:-op(500,fx,'-').
+:-op(400,yfx,'*').
+:-op(400,yfx,'/').
+:-op(400,yfx,'//').
+:-op(400,yfx,'rem').
+:-op(400,yfx,'<<').
+:-op(400,yfx,'>>').
+:-op(300,xfx,'mod').
+:-op(200,fy,'\').
+:-op(200,xfx,'**').
+:-op(200,xfy,'^').
+-----------------------
+=:=/2 [DETERMINED]
+[@evaluable,@evaluable]
+
+Arithmetic Equal
+---------------------
+
+@</2 [DETERMINED]
+[?term,?term]
+
+Term less than
+---------------------
+
+@=</2 [DETERMINED]
+[?term,?term]
+
+Term less than or equal to.
+---------------------
+
+@>/2 [DETERMINED]
+[?term,?term]
+
+Term greater than
+---------------------
+
+@>=/2 [DETERMINED]
+[?term,?term]
+
+Term greater than or equal to.
+---------------------
+
+==/2 [DETERMINED]
+[?term,?term]
+
+Term identical
+---------------------
+
+\==/2 [DETERMINED]
+[?term,?term]
+
+Term not identical
+---------------------
+
+>/2 [DETERMINED]
+[@evaluable,@evaluable]
+
+Arithmetic greater than
+---------------------
+
+</2 [DETERMINED]
+[@evaluable,@evaluable]
+
+Arithmetic less than
+---------------------
+
+>=/2 [DETERMINED]
+[@evaluable,@evaluable]
+
+Arithmetic greater than or equal to
+---------------------
+
+=</2 [DETERMINED]
+[@evaluable,@evaluable]
+
+Arithmetic less than or equal to
+---------------------
+
+=\=/2 [DETERMINED]
+[@evaluable,@evaluable]
+
+Arithmetic Not equal
+---------------------
+
+xor/2
+[+evaluable,+evaluable]
+
+Bitwise `exclusive or'
+---------------------
+
+\/1
+[+evaluable]
+
+Bitwise 'not'
+---------------------
+
+\//2
+[+evaluable,+evaluable]
+
+Bitwise 'or'
+---------------------
+
+/\/2
+[+evaluable,+evaluable]
+
+Bitwise 'and'
+---------------------
+
+mod/2
+[+evaluable,+evaluable]
+
+Modulus
+---------------------
+
+rem/2
+[+evaluable,+evaluable]
+
+Remainder
+---------------------
+
+**/2
+[+evaluable,+evaluable]
+
+Power
+---------------------
+
++/2
+[+evaluable,+evaluable]
+
+Addition
+---------------------
+
+sin/1
+[+evaluable]
+
+Sine
+---------------------
+
+float_integer_part/1
+[+evaluable]
+
+Integer part
+---------------------
+
+float_fractional_part/1
+[+evaluable]
+
+Fractional part
+---------------------
+
+floor/1
+[+evaluable]
+
+Floor
+---------------------
+
+truncate/1
+[+evaluable]
+
+Truncate
+---------------------
+
+round/1
+[+evaluable]
+
+Round
+---------------------
+
+ceiling/1
+[+evaluable]
+
+Ceiling
+---------------------
+
+cos/1
+[+evaluable]
+
+Cosine
+---------------------
+
+atan/1
+[+evaluable]
+
+Arc tangent
+---------------------
+
+exp/1
+[+evaluable]
+
+Exponentiation
+---------------------
+
+log/1
+[+evaluable]
+
+Log
+---------------------
+
+sqrt/1
+[+evaluable]
+
+Square root
+---------------------
+
+abs/1
+[+evaluable]
+
+Absolute value
+---------------------
+
+sign/1
+[+evaluable]
+
+SIGN
+---------------------
+
+-/2
+[+evaluable,+evaluable]
+
+Subtraction
+---------------------
+
+-/1
+[+evaluable]
+
+Negation
+---------------------
+
++/1
+[+evaluable]
+
+Not action over a number
+---------------------
+
+*/2
+[+evaluable,+evaluable]
+
+Multiplication
+---------------------
+
+//2
+[+evaluable,+evaluable]
+
+Dividsion
+---------------------
+
+///2
+[+evaluable,+evaluable]
+
+Integer division
+---------------------
+
+<</2
+[+evaluable,+evaluable]
+
+Bitwise left shift
+---------------------
+
+>>/2
+[+evaluable,+evaluable]
+
+Bitwise right shift
+---------------------
+
+is/2 [DETERMINED]
+[?evaluable,@evaluable]
+
+'is'(Result, Expression) is true if and only if the value of evaluating Expression as an expression is Result
+---------------------
+
+true/0 [DETERMINED]
+
+The perdicate is always true.
+---------------------
+
+fail/0 [DETERMINED]
+
+The predicate is always false.
+---------------------
+
+nl/0 [DETERMINED]
+
+Out the next line char symbol into current output stream
+---------------------
+
+tab/1 [DETERMINED]
+[+integer]
+
+Out a number of space symbols into current output stream
+---------------------
+
+not/1 [DETERMINED]
+
+True if goal cannot be proven
+---------------------
+
+=/2 [DETERMINED]
+
+Unify X and Y terms. It is true if X and Y are unifiable.
+---------------------
+
+\=/2 [DETERMINED]
+
+Unify X and Y terms. It is true if X and Y are not-unifiable.
+---------------------
+
+copy_term/2 [DETERMINED]
+[?term,?term]
+
+copy_term(X,Y) is true if and only if Y unifies with a term T which is a renamed copy of X.
+---------------------
+
+time/1
+[+callable_term]
+
+Execute  Goal just but  print used time, It supports choice point (!) for inside goal.
+---------------------
+
+!/0 [DETERMINED]
+
+! is true. All choice ponts between the cut and the parent goal are removed. The effect is commit to use of both the current clause and the substitutions found at the point of the cut.
+---------------------
+
+!!/0 [DETERMINED]
+
+!! is true. Local version of !/0. It doesn't cut the knowledge base selection, i.e. it works only inbounds of current goal.
+---------------------
+
+repeat/0
+
+repeat is true. It just places a choice point every call.
+---------------------
+
+\+/1 [DETERMINED]
+[+callable_term]
+
+\+(Term) is true if and only if call(Term) is false.
+---------------------
+
+clause/2
+[+head,?callable_term]
+
+clause(Head, Body) is true if and only if
+* The predicate of Head is public (the standard does not specify how a predicate is declared public but dynamic predicates are public, and
+* There is a clause in the database which corresponds to a term H:- B which unifies with Head :- Body.
+---------------------
+
+current_op/3
+[?integer,?operator_specifier,?atom]
+
+current_op(Priority, Op_specifier, Operator) is true if and only if Operator is an operator with properties given by  Op_specifier and Priority
+---------------------
+
+op/3 [DETERMINED]
+[+integer,+operator_specifier,@atom_or_atom_list]
+
+These predicates allow the operator table to be altered or inspected.
+op(Priority, Op_Specifier, Operator) is true, with the side effect that
+1. if Priority is 0 then Operator is removed from the operator table, else
+2. Operator is added to the Operator table, with priority (lower binds tighter) Priority and associativity determined by Op_Specifier
+---------------------
+
+call/1
+[+callable_term]
+
+call(G) is true if and only if G represents a goal which is true.
+---------------------
+
+once/1 [DETERMINED]
+[+callable_term]
+
+once(Term) is true. once/1 is not re-executable.
+---------------------
+
+;/2
+
+';'(Either, Or) is true iff and either Either or Or is true.
+---------------------
+
+->/2
+
+'->'(If, Then) is true if and only if If is true and Then is true for the first solution of If
+---------------------
+
+,/2
+
+','(First, Second) is true if and only if First is true and Second is true.
+---------------------
+
+var/1 [DETERMINED]
+
+var(X) is true if and only if X is a variable.
+---------------------
+
+nonvar/1 [DETERMINED]
+
+nonvar(X) is true if and only if X is not a variable.
+---------------------
+
+atom/1 [DETERMINED]
+
+atom(X) is true if and only if X is an atom.
+---------------------
+
+integer/1 [DETERMINED]
+
+integer(X) is true if and only if X is an integer.
+---------------------
+
+number/1 [DETERMINED]
+
+number(X) is true if and only if X is an integer or a float.
+---------------------
+
+float/1 [DETERMINED]
+
+float(X) is true if and only if X is a float.
+---------------------
+
+compound/1 [DETERMINED]
+
+compound(X) is true if and only if X is a compound term, that is neither atomic nor a variable.
+---------------------
+
+atomic/1 [DETERMINED]
+
+atomic(X) is true if and only if X is atomic (that is an atom, an integer or a float).
+---------------------
+
+arg/3 [DETERMINED]
+[+integer,+compound_term,?term]
+
+arg(N,Term, Arg) is true if nad only if the Nth argument of Term is Arg
+---------------------
+
+functor/3 [DETERMINED]
+[-nonvar,+atomic,+integer]
+[+nonvar,?atomic,?integer]
+
+functor(Term, Name, Arity) is true if and only if:
+* Term is a compound term with functor name Name and arity Arity or
+* Term is an atomic term equal to Name and Arity is 0.
+---------------------
+
+=../2 [DETERMINED]
+[+nonvar,?non_empty_list]
+[-nonvar,+non_empty_list]
+
+Term =.. List is true if and only if
+* Term is an atomic term and List is the list whose only element is Term, or
+* Term is a compound term and List is the list whose head is the functor name of Term and whose tail is the list of the arguments of Term. 
+---------------------
+
+time/4 [DETERMINED]
+[?integer,?integer,?integer,?integer]
+
+Get current time Hours,Minutes,Seconds,Milliseconds.
+---------------------
+
+date/3 [DETERMINED]
+[?integer,?integer,?integer]
+
+Get current date Year, Month, Day. The January is 1st month
+---------------------
+
+write/1 [DETERMINED]
+
+Write a term into the current output stream.
+---------------------
+
+put/1 [DETERMINED]
+[+number]
+
+Write a char for its code into the current output stream.
+---------------------
+
+get/1 [DETERMINED]
+[?number]
+
+Read next non-blank char code from the current input stream.
+---------------------
+
+get0/1 [DETERMINED]
+[?number]
+
+Read next char code from the current input stream.
+---------------------
+
+read/1 [DETERMINED]
+
+ Read  the next Prolog term from the current input stream.
+---------------------
+
+readln/1 [DETERMINED]
+
+ Read  the next line (until NL symbol) from the current input stream as an atom. It sypports backspace to remove last symbol from buffer.
+---------------------
+
+readint/1 [DETERMINED]
+
+ Read  an integer number (and ignore white space) until NL symbol from the current input stream as an integer atom or the end_of_file atom. It sypports backspace to remove last symbol from buffer. If the input string can't be converted to an integer atom, the predicate will return false.
+---------------------
+
+readreal/1 [DETERMINED]
+
+ Read  an real number (and ignore white space) until NL symbol from the current input stream as an real atom or the end_of_file atom. It sypports backspace to remove last symbol from buffer. If the input string can't be converted to a real atom, the predicate will return false.
+---------------------
+
+consult/1 [DETERMINED]
+[+atom]
+[+list]
+
+Take an atom as the file name of the resource to be used for consultation, or a list contains a resource name chain. The resource will be getted through the current ProlStreamManager.
+---------------------
+
+see/1 [DETERMINED]
+[+atom]
+
+Open SrcDest for reading and make it the current input
+---------------------
+
+seen/0 [DETERMINED]
+
+Close the current input stream.
+---------------------
+
+seeing/1 [DETERMINED]
+[?term]
+
+Return the current input stream name.
+---------------------
+
+telling/1 [DETERMINED]
+[?term]
+
+Return the current output stream name.
+---------------------
+
+told/0 [DETERMINED]
+
+Close the current output stream.
+---------------------
+
+tell/1 [DETERMINED]
+[+atom]
+
+Open SrcDest for writing and make it the current output
+---------------------
+
+append/1 [DETERMINED]
+[+atom]
+
+Open SrcDest to append new data and make it the current input
+---------------------
+
+atom_chars/2 [DETERMINED]
+[+atom,?list]
+[-atom,+character_list]
+
+atom_chars(Atom, List) succeeds if and only if List is a list whose elements are the one character atoms that in order make up  Atom.
+---------------------
+
+char_code/2 [DETERMINED]
+[+character,?character_code]
+[-character,+character_code]
+
+char_code(Char, Code) succeeds if and only if Code is the character code that corresponds to the character Char.
+---------------------
+
+number_codes/2 [DETERMINED]
+[+number,?character_code_list]
+[-number,+character_code_list]
+
+number_codes(Number, CodeList) succeeds if and only if CodeList is a list whose elements are the codes for the one character atoms that in order make up Number.
+---------------------
+
+number_chars/2 [DETERMINED]
+[+number,?character_list]
+[-number,+character_list]
+
+number_chars(Number, List) succeeds if and only if List is a list whose elements are the one character atoms that in order make up Number.
+---------------------
+
+for/3
+[?term,+integer,+integer]
+
+Allows to make an integer counter from a variable, (Var, Start, End).
+---------------------
+
+rnd/2 [DETERMINED]
+[+integer,?integer]
+[+list,?term]
+
+Allows to generate a pseudo randomize integer (limit,value) between 0 (inclusive) and the limit (exclusive) or select random element from the list.
+---------------------
+
+atom_length/2 [DETERMINED]
+[+atom,?integer]
+
+atom_length(Atom, Length) is true if and only if the integer Length equals the number of characters in the name of the atom Atom.
+---------------------
+
+atom_codes/2 [DETERMINED]
+[+atom,?character_code_list]
+[?atom,+list]
+
+atom_codes(Atom, List) succeeds if and only if List is a list whose elements are the character codes that in order correspond to the characters that make up  Atom.
+---------------------
+
+halt/1 {halt/0} [DETERMINED]
+[+integer]
+
+ These predicate terminate a Prolog engine and you can send the status of a cause.
+---------------------
+
+abolish/1 [DETERMINED]
+[@predicate_indicator]
+
+abolish(Pred/2) is true. It has for side effect the removal of all clauses of the predicate indicated by Pred. After abolish/1 the predicate is not found by current_predicate.
+---------------------
+
+sort/2 [DETERMINED]
+[+list,?list]
+
+True if Sorted can be unified with a list holding the elements of List, sorted to the standard order of terms
+---------------------
+
+findall/3 [DETERMINED]
+[?term,+callable_term,?list]
+
+Creates  a list of the instantiations Template gets  successively on backtracking  over Goal and unifies the  result with Bag.
+---------------------
+
+asserta/1 [DETERMINED]
+[@clause]
+
+Addition of a clause into the knowlwde base before all other clauses.
+---------------------
+
+assertz/1 {assert/1} [DETERMINED]
+[@clause]
+
+Addition of a clause into the knowlwde base after all other clauses.
+---------------------
+
+retract/1 {retracta/1} [DETERMINED]
+[@clause]
+
+Retract the first clause which can be unified with argument. True if there is such clause in the knowledge base.
+---------------------
+
+retractz/1 [DETERMINED]
+[@clause]
+
+Retract the last clause which can be unified with argument. True if there is such clause in the knowledge base.
+---------------------
+
+retractall/1 [DETERMINED]
+[@clause]
+
+Retract all clauses which can be unified with argument. True if there is as minimum one clause in the knowledge base.
+---------------------
+
+catch/3
+[+callable_term,?term,+callable_term]
+
+A goal catch(Goal, Catcher, Handler) is true if
+1. call(Goal) is true, or
+2. An exception is raised which throws a Ball that is caught by Catcher and Handler then succeeds 
+---------------------
+
+throw/1 [DETERMINED]
+[+callable_term]
+
+Throw an exception which can be catched by catch/3
+---------------------
+
+beep/0 [DETERMINED]
+
+Make a short sound. It depends on the OS.
+---------------------
+
+pause/1 [DETERMINED]
+[+number]
+
+Make a pause for defined millisecond number.
+---------------------
+
+facts/1
+[+callable_term]
+
+Finds only facts at the knowledge base.
+---------------------
+
+rules/1
+[+callable_term]
+
+Finds and call only rules at the knowledge base.
+---------------------
+
+lock/1 [DETERMINED]
+[+atom]
+
+Block current thread until it will be possible to lock an atom, don't forget unlock.
+---------------------
+
+unlock/1 [DETERMINED]
+[+atom]
+
+Unlock a locker for its name and allow to continue work of waiting threads. If any other thread is the owner for the locker then permission_error/3 will be thrown.
+---------------------
+
+trylock/1 [DETERMINED]
+[+atom]
+
+Try make lock for a named locker, if it is being locked already then fail else success.
+---------------------
+
+async/1 [DETERMINED]
+[+callable_term]
+
+Allows to solve a goal asynchronously, it will be started as a daemon so it will be stopped when the main goal will be solved or failed. If there will be uncatched exception it will be just out at the log.
+---------------------
+
+waitasync/0 [DETERMINED]
+
+Blocking waiting until all daemon threads (started with either fork/1 or async/1) in the context will be completed and deactivated (it checks the queue of the threads and their activity). Always true.
+---------------------
+
+fork/1
+[+list]
+
+Allows to prove a few goals (non linked between each other) in separated threads simultaneously, it is blocking the calling thread until all threads (started by the predicate) are completed. The fork implements AND operation (i.e. all goals have to be true else the predicate will fail).You must not have the same noninstantiated variables in terms that will be executed in different threads. The fork_error/1 will be thrown if any thread will throw an exception.
+---------------------
+
+ifork/1
+[+list]
+
+It works like fork/1 but it will interrupt all noncompleted threads of the fork if any proven result is fail.
+---------------------
+
+regtrigger/3 [DETERMINED]
+[+predicate_indicator,+triggerevent,+callable_term]
+
+regtrigger(somepredicate/3,onassert,triggerhandler) is always true. The predicate allows to register a trigger handler for distinguished predicate signature. The handled trigger event can be selected from the list [onassert, onretract, onassertretract].
+---------------------
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+com.igormaznitsa.prol.libraries.ProlGraphicLibrary
+===============================================
+dot/2 [DETERMINED]
+[+number,+number]
+
+Draw a point in the coordinates (X,Y) with the current pen color.
+---------------------
+
+removeaction/1 [DETERMINED]
+[+term]
+
+Remove an action from the action menu for its name.
+---------------------
+
+removeallactions/0 [DETERMINED]
+
+Remove all actions from the action menu
+---------------------
+
+bindaction/2 [DETERMINED]
+[+term,+callable_term]
+
+Bind a goal to an action menu item (menu_item_name, action) which can be selected by user.
+---------------------
+
+rectangle/4 [DETERMINED]
+[+number,+number,+number,+number]
+
+Draw a rectangle in the coordinates (X,Y,Width,Height) with the current pen color.
+---------------------
+
+fillrectangle/4 [DETERMINED]
+[+number,+number,+number,+number]
+
+Fill a rectangle in the coordinates (X,Y,Width,Height) with the current brush color.
+---------------------
+
+plot/4 [DETERMINED]
+[+number,+number,+number,+number]
+
+Draw a line (X1,Y1,X2,Y2) with the current pen color.
+---------------------
+
+plot/2 [DETERMINED]
+[+number,+number]
+
+Draw a line from the last point to (X,Y) with the current pen color.
+---------------------
+
+oval/4 [DETERMINED]
+[+number,+number,+number,+number]
+
+Draw an oval into a rectangle area with coords (X,Y,Width,Height) with the current pen color.
+---------------------
+
+filloval/4 [DETERMINED]
+[+number,+number,+number,+number]
+
+Fill an oval into a rectangle area with coords (X,Y,Width,Height) with the current pen color.
+---------------------
+
+fillscreen/0 [DETERMINED]
+
+Fill all screen by the brush color.
+---------------------
+
+brushcolor/1 [DETERMINED]
+[?atom]
+
+Change or get the current brush color. If it can't set color then it will return false
+---------------------
+
+pencolor/1 [DETERMINED]
+[?atom]
+
+Change or get the current pen color. If it can't set color then it will return false
+---------------------
+
+cursor/2 [DETERMINED]
+[?number,?number]
+
+Set or get the current cursor position (X,Y).
+---------------------
+
+print/1 [DETERMINED]
+[+term]
+
+Print the text representation of the term with the current pen color. The baseline of the leftmost character is at the cursor position.
+---------------------
+
+saveimage/2 [DETERMINED]
+[+atom,+atom]
+
+Arguments (image_name,format_name). Format can be 'png','jpg' or 'gif'. Save the current graphic buffer state as a named image with the type. It can throw 'permission_error' exception if it is not possible to write the image.
+---------------------
+
+graphics/2 [DETERMINED]
+[?integer,?integer]
+
+Change or get the graphic screen size (width,heigh) and fill it with the curren background color. Pay attention, the predicate creates the new offscreen buffer so don't use it to clear screen.
+---------------------
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+com.igormaznitsa.prol.libraries.ProlStringLibrary
+===============================================
+concat/3 [DETERMINED]
+[+atom,+atom,?atom]
+[+atom,?atom,+atom]
+[?atom,+atom,+atom]
+
+Concat two strings.
+---------------------
+
+str_trim/2 [DETERMINED]
+[+atom,?atom]
+
+Trim string.
+---------------------
+
+upper_lower/2 [DETERMINED]
+[+atom,?atom]
+[?atom,+atom]
+
+Allows to make upper or lower case text version of an atom.
+---------------------
+
+str_len/2 [DETERMINED]
+[+atom,?integer]
+
+Get string length.
+---------------------
+
+str_int/2 [DETERMINED]
+[+atom,?integer]
+[?atom,+integer]
+
+Convert a text atom to an integer atom (or back).
+---------------------
+
+str_real/2 [DETERMINED]
+[+atom,?number]
+[?atom,+number]
+
+Convert a text atom to a real numeric atom (or back).
+---------------------
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+com.igormaznitsa.prol.easygui.MainFrame.LogLibrary
+===============================================
+msgerror/1 [DETERMINED]
+
+The predicate allows to output information marked as error at the message window.
+---------------------
+
+msgwarning/1 [DETERMINED]
+
+The predicate allows to output information marked as warning at the message window.
+---------------------
+
+msginfo/1 [DETERMINED]
+
+The predicate allows to output information marked as info at the message window.
+---------------------
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
